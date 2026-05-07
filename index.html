@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BarakaLink</title>
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container" id="home">
+
+  <!-- TOP -->
+ <div class="top-bar">
+  <div class="logo">Baraka<span>Link</span></div>
+
+  <div class="auth-buttons">
+
+    <!-- 🌍 LANGUAGE -->
+    <div class="lang-wrapper">
+      <i class="fa-solid fa-globe" id="langToggle"></i>
+
+      <div class="lang-dropdown" id="langMenu">
+        <p data-lang="en">English</p>
+        <p data-lang="am">Amharic</p>
+      </div>
+    </div>
+
+    <!-- 🌙 THEME -->
+    <i class="fa-solid fa-moon" id="themeToggle"></i>
+
+    <button class="login">Login</button>
+    <button class="signup">Sign Up</button>
+  </div>
+ </div>
+
+ <section class="hero">
+
+  <div class="hero-inner">  <!-- ✅ ADD THIS -->
+
+    <!-- LEFT -->
+    <div class="hero-left">
+
+      <div class="badge">
+        ✨ Now Connecting parents with nearby Quran Teachers
+      </div>
+
+         <h1>
+          Find trusted Quran teachers <br> near you in minutes.
+         </h1>
+
+         <p>
+          Connect with verified Ustaz and start learning with ease and confidence.
+         </p>
+      <div class="hero-buttons">
+        <button class="primary" id="findUstazBtn">
+             Find Ustaz Near You →
+        </button>
+    
+        <button class="secondary" id="viewFieldsBtn">
+             View Study Fields
+        </button>
+      </div>
+
+      <div class="users">
+        <div class="avatars">
+          <span></span><span></span><span></span><span></span>
+          <div class="more">+2k</div>
+        </div>
+        <p>Trusted by 5,000+ students</p>
+      </div>
+
+    </div>
+    
+  </div>
+
+ </section>
+  <!-- SEARCH -->
+  <div class="search">
+    <input type="text" id="searchInput" placeholder="Search ustaz or subject...">
+  </div>
+   
+  <!-- FILTERS -->
+  <div class="filters">
+    <div class="filter active">All</div>
+    <div class="filter">Male</div>
+    <div class="filter">Female</div>
+    <div class="filter">Hifz</div>
+    <div class="filter">Tajweed</div>
+  </div>
+
+  <!-- POPULAR -->
+<div class="section" id="popularSection">
+
+  <div class="section-header">
+    <h3>Popular Near You</h3>
+    <span class="see-all">See all</span>
+  </div>
+
+  <div class="popular-wrapper">
+    <button class="scroll-btn left" onclick="scrollPopular(-1)">‹</button>
+
+    <div class="popular" id="popularList"></div>
+
+    <button class="scroll-btn right" onclick="scrollPopular(1)">›</button>
+  </div>
+
+</div>
+  <!-- LIST -->
+  <div class="section">
+    <h3>All Ustaz</h3>
+    <div id="ustazList"></div>
+  </div>
+  
+  <!-- HREF NAV SECTIONS -->
+
+ <section id="home">
+  <!-- your hero + landing content -->
+ </section>
+
+ <section id="services" class="services">
+
+  <h2 class="section-title">Study Fields</h2>
+  <p class="section-subtitle">
+    Learn Islam step by step with structured guidance from qualified Ustaz.
+  </p>
+
+  <div class="service-grid">
+
+    <div class="service-card">
+      <h3>📖 Quran Basic</h3>
+      <p>
+        Learn Arabic letters, pronunciation, and basic reading skills to start your Quran journey.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>🎧 Quran Tajweed</h3>
+      <p>
+        Master correct pronunciation rules and recitation techniques for beautiful Quran reading.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>🌙 Hifz</h3>
+      <p>
+        Memorize the Quran step-by-step with structured revision and guided learning plans.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>📘 Tafseer</h3>
+      <p>
+        Understand the meaning and deep interpretation of Quranic verses in a simple way.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>🕌 Hadith</h3>
+      <p>
+        Learn authentic sayings of Prophet Muhammad (PBUH) and their practical life guidance.
+      </p>
+    </div>
+
+  </div>
+
+ </section>
+ <section id="blog" class="services">
+
+  <h2 class="section-title">Islamic Learning & Guidance</h2>
+
+  <p class="section-subtitle">
+    Helpful articles for students, parents, and Quran teachers.
+  </p>
+
+  <div class="service-grid">
+
+    <a href="#" class="card-link blog-card" data-protected="true">
+
+      <div class="service-card">
+
+        <h3>How to Choose the Right Quran Teacher for Your Child</h3>
+
+        <p>
+          Learn the most important qualities parents should look for before choosing an Ustaz.
+        </p>
+
+        <span class="read-more">Read More →</span>
+
+      </div>
+
+    </a>
+
+
+    <a href="#" class="card-link blog-card" data-protected="true">
+
+      <div class="service-card">
+
+        <h3>5 Common Mistakes Students Make in Tajweed</h3>
+
+        <p>
+          Improve your Quran recitation by avoiding these beginner mistakes.
+        </p>
+
+        <span class="read-more">Read More →</span>
+
+      </div>
+
+    </a>
+
+
+    <a href="#" class="card-link blog-card" data-protected="true">
+
+      <div class="service-card">
+
+        <h3>Why One-on-One Quran Learning Works Better</h3>
+
+        <p>
+          Discover why personal mentorship accelerates Quran understanding.
+        </p>
+
+        <span class="read-more">Read More →</span>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+ <section id="about" class="section">
+
+  <h2 class="section-title">About Us</h2>
+
+  <p class="section-subtitle">
+    Connecting students with trusted Quran teachers.
+  </p>
+
+  <div class="about-box">
+
+    <div class="about-left">
+
+      <h2>
+        Connecting Students with Trusted Quran Teachers
+      </h2>
+
+      <p>
+        BarakaLink helps students and parents find verified Quran teachers easily and safely. 
+        Our mission is to simplify Islamic learning through technology while preserving authentic knowledge and values.
+      </p>
+
+      <p>
+        We believe every student deserves access to qualified Ustaz and meaningful Islamic education regardless of location.
+      </p>
+
+    </div>
+
+    <div class="about-right">
+
+      <div class="about-stat">
+        <h3>5K+</h3>
+        <p>Students</p>
+      </div>
+
+      <div class="about-stat">
+        <h3>200+</h3>
+        <p>Verified Teachers</p>
+      </div>
+
+      <div class="about-stat">
+        <h3>10+</h3>
+        <p>Study Programs</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  </section>
+
+  <section id="contact" class="section">
+
+  <h2 class="section-title">Contact Us</h2>
+
+  <p class="section-subtitle">
+    Reach out to our support team anytime.
+  </p>
+
+  <div class="contact-grid">
+
+    <div class="contact-card">
+      <i class="fa-solid fa-envelope"></i>
+      <h3>Email</h3>
+      <p>support@barakalink.com</p>
+    </div>
+
+    <div class="contact-card">
+      <i class="fa-solid fa-phone"></i>
+      <h3>Phone</h3>
+      <p>+251 912 345 678</p>
+    </div>
+
+    <div class="contact-card">
+      <i class="fa-solid fa-location-dot"></i>
+      <h3>Location</h3>
+      <p>Addis Ababa, Ethiopia</p>
+    </div>
+
+  </div>
+   <!-- =========================
+   SOCIAL MEDIA
+========================= -->
+<div class="social-box">
+
+  <h3 class="section-subtitle" style="margin-top:20px;">
+    Follow Us
+  </h3>
+
+  <div class="social-icons">
+
+    <a href="#" class="social">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="#" class="social">
+      <i class="fa-brands fa-telegram"></i>
+    </a>
+
+    <a href="#" class="social">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="#" class="social">
+      <i class="fa-brands fa-tiktok"></i>
+    </a>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+   DIRECT CONTACT FORM
+========================= -->
+<div class="contact-form-box">
+
+  <h3 class="section-subtitle" style="margin-top:20px;">
+    Send us a message
+  </h3>
+
+  <div class="form-row">
+    <input type="text" placeholder="First Name" value="First Name">
+    <input type="text" placeholder="Last Name" value="Last Name">
+  </div>
+
+  <input type="text" placeholder="Phone Number" value="+251 912 345 678">
+
+  <textarea placeholder="How can we help you?"></textarea>
+
+  <button class="send-btn">
+    <i class="fa-solid fa-paper-plane"></i>
+    Send Message
+  </button>
+
+</div>
+<footer class="footer">
+
+  <div class="footer-box">
+
+    <div class="footer-brand">
+      <h2>Baraka<span>Link</span></h2>
+      <p>
+        Connecting students with trusted Quran teachers in Ethiopia.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#blog">Blog</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-telegram"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+
+    <p class="footer-bottom">
+      © 2026 BarakaLink. All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
+  </section>
+
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <a href="#home" class="active">Home</a>
+  <a href="#services">Services</a>
+  <a href="#blog">Blog</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</div>   
+
+
+<!-- AUTH MODAL -->
+
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-box">
+
+    <!-- HEADER -->
+    <div class="auth-header">
+      <h2 id="authTitle">Welcome Back</h2>
+      <span id="closeAuth">&times;</span>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="loginForm" class="auth-form">
+
+      <!-- PHONE -->
+      <label>Phone Number</label>
+      <div class="phone-group">
+        <span class="code">+251</span>
+        <input type="text" id="loginPhone" placeholder="912 345 678">
+      </div>
+
+      <!-- PASSWORD -->
+      <label>Password</label>
+      <div class="password-group">
+        <input type="password" id="loginPassword" placeholder="********">
+        <i class="fa-solid fa-eye toggle-password"></i>
+      </div>
+
+      <!-- FORGOT -->
+      <p class="forgot">Forgot password?</p>
+
+      <button onclick="login()">Sign In</button>
+
+      <p class="switch">
+        Don't have an account?
+        <span onclick="showSignup()">Create one</span>
+      </p>
+    </div>
+
+    <!-- SIGNUP -->
+    <div id="signupForm" class="auth-form hidden">
+
+      <!-- ROLE -->
+      <label>Sign up as</label>
+
+ <div class="custom-select" id="roleSelect">
+
+  <div class="select-box">
+    <span id="roleText">Select role</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+
+  <div class="dropdown hidden">
+    <div class="option" data-value="parent">Parent</div>
+    <div class="option" data-value="ustaz">Ustaz / Ustaza</div>
+  </div>
+
+ </div>
+
+      <!-- NAME -->
+      <!-- NAME (SPLIT) -->
+    <div class="row">
+        <input type="text" id="firstName" placeholder="First Name">
+        <input type="text" id="lastName" placeholder="Last Name">
+    </div>
+
+      <!-- PHONE -->
+      <div class="phone-group">
+        <span class="code">+251</span>
+        <input type="text" id="signupPhone" placeholder="912 345 678">
+      </div>
+
+      <!-- SUBCITY -->
+      <select id="subcity">
+        <option value="">Select Sub-City</option>
+        <option value="bole">Bole</option>
+        <option value="yeka">Yeka</option>
+        <option value="kirkos">Kirkos</option>
+      </select>
+
+      <!-- AREA -->
+      <select id="area">
+        <option value="">Select Area</option>
+      </select>
+
+      <!-- USTAZ EXTRA -->
+     <!-- GENDER (CUSTOM SELECT LIKE ROLE) -->
+
+<div id="ustazFields" class="hidden">
+
+  <input type="number" id="experience" placeholder="Years of Experience">
+
+  <!-- GENDER -->
+  <label>Gender</label>
+  <select id="gender">
+    <option value="">Select Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+
+</div>
+      <!-- PASSWORD -->
+      <div class="password-group">
+        <input type="password" id="signupPassword" placeholder="Password">
+        <i class="fa-solid fa-eye toggle-password"></i>
+      </div>
+
+      <!-- CONFIRM PASSWORD -->
+     <div class="password-group">
+       <input type="password" id="confirmPassword" placeholder="Confirm Password">
+       <i class="fa-solid fa-eye toggle-password"></i>
+    </div>
+
+      <button onclick="signup()">Create Account</button>
+
+      <p class="switch">
+        Already have an account?
+        <span onclick="showLogin()">Login</span>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
